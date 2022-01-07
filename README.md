@@ -49,6 +49,12 @@ for training and data generation
 
 Warning: I found that outdated NVIDIA drivers may cause errors with EGL. If you want to try out the EGL version, please update your NVIDIA driver to the latest!!
 
+## Run easily from python terminal
+
+Assuming conda environment is setup and weights downloaded to checkpoints folder manually or with script.
+
+> `python ./apps/eval.py --name pifu_demo --batch_size 1 --mlp_dim 257 1024 512 256 128 1 --mlp_dim_color 513 1024 512 256 128 3 --num_stack 4 --num_hourglass 2 --resolution 256 --hg_down ave_pool --norm group --norm_color group --test_folder_path ./sample_images --load_netG_checkpoint_path ./checkpoints/net_G --load_netC_checkpoint_path ./checkpoints/net_C`
+
 ## Windows demo installation instuction
 
 - Install [miniconda](https://docs.conda.io/en/latest/miniconda.html)
